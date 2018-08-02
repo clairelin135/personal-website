@@ -3,30 +3,20 @@ $(document).ready( function () {
 	sizeBannerBackground();
 	createGalleryIcons();
 
-	$(window).resize(function() {
-		sizeBannerBackground();
-		if($(window).width() < 763) {
-			switchToMenu();
-		} else {
-			//switch to desktop view
-			$('#navbar').css("width", "100%");
-			$('.navbar-option').css("display", "inline-block");
-			$('.navbar-option').css("width", "auto");
-		};
-	});
-
 	$('.gallery-image').first().css("opacity", "1");
 	$('.gallery-buttons').first().css("opacity", "1");
 
 	$(".navbar-option").hover(
 		function() {
 			$(this).animate({
-				backgroundColor: "rgba(99, 194, 243, 0.1)",
+				backgroundColor: "rgba(89, 102, 230, 1)",
+				color: "#ffffff"
 			}, 300);
 		},
 		function() {
 			$(this).animate({
 				backgroundColor: "rgba(255, 255, 255, 0.0)",
+				color: "#000000"
 			}, 300);
 		}
 	);
@@ -175,43 +165,22 @@ $(document).ready( function () {
 	});
 
 	$(document).on('scroll', function() {
+		$(".selected-navbar-option").removeClass("selected-navbar-option");
 		var scrollBottom = $(window).scrollTop() + $(window).height();
-	    if(scrollBottom>=$('#web-projects').position().top){
-	    		if(scrollBottom>=$('#graphic-design').position().top){
-	    			if(scrollBottom>=$('#experience').position().top){
-	    				if(scrollBottom>=$('#contact').position().top){
-	    					//contact
-	    					if(!$(".unselected-navbar-option").eq(4).hasClass("selected-navbar-option")) {
-	    						$(".selected-navbar-option").removeClass("selected-navbar-option");
-	    						$(".unselected-navbar-option").eq(4).addClass("selected-navbar-option");
-	    					};
-	    				} else {
-	    					//experience
-	    					if(!$(".unselected-navbar-option").eq(3).hasClass("selected-navbar-option")) {
-	    						$(".selected-navbar-option").removeClass("selected-navbar-option");
-	    						$(".unselected-navbar-option").eq(3).addClass("selected-navbar-option");
-	    					};
-	    				}
-	    			} else {
-	    				//graphic design
-	    				if(!$(".unselected-navbar-option").eq(2).hasClass("selected-navbar-option")) {
-    						$(".selected-navbar-option").removeClass("selected-navbar-option");
-    						$(".unselected-navbar-option").eq(2).addClass("selected-navbar-option");
-    					};
-	    			}
-	    		} else {
-	    			//web projects
-	    			if(!$(".unselected-navbar-option").eq(1).hasClass("selected-navbar-option")) {
-					$(".selected-navbar-option").removeClass("selected-navbar-option");
-					$(".unselected-navbar-option").eq(1).addClass("selected-navbar-option");
+	    if(scrollBottom>=$('#experience').position().top){
+    		if(scrollBottom>=$('#projects').position().top){
+    			if(scrollBottom>=$('#design').position().top){
+						$(".navbar-option").eq(3).addClass("selected-navbar-option");
+    			} else {
+    				// projects
+						$(".navbar-option").eq(2).addClass("selected-navbar-option");
+    			}
+    		} else {
+    			// experience
+					$(".navbar-option").eq(1).addClass("selected-navbar-option");
 				};
-	    		}
 	    } else {
-	    		//about
-	    		if(!$(".unselected-navbar-option").eq(0).hasClass("selected-navbar-option")) {
-				$(".selected-navbar-option").removeClass("selected-navbar-option");
-				$(".unselected-navbar-option").eq(0).addClass("selected-navbar-option");
-			};
+				$(".navbar-option").eq(0).addClass("selected-navbar-option");
 	    }
 	})
 	if ( $(window).width() < 763) {
