@@ -25,9 +25,26 @@ h4 {
 
 h5 {
   font-family: 'Heebo', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 24px;
+}
+
+h6 {
+  font-family: 'Heebo', sans-serif;
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-size: 12px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+p {
+  font-family: 'Heebo', sans-serif;
   font-weight: 300;
-  font-size: 16px;
-  line-height: 22px;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.5px;
 }
 
 a, a:hover, a:active, a:visited, a:focus {
@@ -39,18 +56,42 @@ a, a:hover, a:active, a:visited, a:focus {
   color: #ffffff;
 }
 
-.cream {
-  color: #f8e9a1;
+.white-background {
+  background-color: #ffffff;
 }
 
-.orange {
-  color: #ff653b;
+.snow {
+  color: #f4f4f4;
+}
+
+.snow-background {
+  background-color: #f4f4f4;
+}
+
+.light-blue {
+  color: #929df0;
 }
 
 .blue {
-  color: #63c2f3;
+  color: #5862e9;
 }
 
-.violet {
-  color: #241544;
+.blue-background {
+  background-color: #5862e9;
+}
+
+.dark-gray {
+  color: #444444;
+}
+
+.dark-gray-background {
+  background-color: #444444;
+}
+
+.center {
+  text-align: center;
+}
+
+.justify {
+  text-align: justify;
 }

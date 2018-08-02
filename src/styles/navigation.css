@@ -2,10 +2,14 @@
 	background-color: #ffffff;
 	position: fixed;
 	width: 100%;
-	border-bottom:1px solid rgba(255,255,255,0.3);
+	border-bottom:1px solid rgba(88, 98, 233, 0.1);
 	top: 0px;
 	z-index: 2;
-  height: 70px;
+}
+
+#navbar-table {
+	height: 70px;
+	vertical-align: middle;
 }
 
 .navbar-option-wrapper {
@@ -13,9 +17,16 @@
 }
 
 .navbar-option {
-  padding: 10px;
+  padding: 8px 16px;
+	border-radius: 20px;
 }
 
 .selected-navbar-option {
-	border: 1px solid rgba(99, 194, 243, 0.5);
+	border: 1px solid rgb(89, 102, 230);
+	border-radius: 20px;
+}
+
+#footer {
+	padding: 50px 0px;
+	background-color: rgb(50, 50, 50);
 }
