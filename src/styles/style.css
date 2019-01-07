@@ -95,3 +95,7 @@ a, a:hover, a:active, a:visited, a:focus {
 .justify {
   text-align: justify;
 }
+
+.overflow-hidden {
+  overflow: hidden;
+}

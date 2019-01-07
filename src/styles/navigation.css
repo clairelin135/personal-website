@@ -7,13 +7,12 @@
 	z-index: 2;
 }
 
-#navbar-table {
+.navbar-container {
 	height: 70px;
-	vertical-align: middle;
-}
-
-.navbar-option-wrapper {
-  padding: 0px 20px;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
 }
 
 .navbar-option {
