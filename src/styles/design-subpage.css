@@ -1,0 +1,18 @@
+.large-image {
+  height: 500px;
+}
+
+.intro-bg {
+	position: absolute;
+	height: 600px;
+	width: 100%;
+	z-index: -5;
+}
+
+.bt-image {
+  width: 400px;
+}
+
+.med-image {
+  width: 500px;
+}
