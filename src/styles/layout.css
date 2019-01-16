@@ -28,40 +28,24 @@
 	margin-bottom: 20px;
 }
 
-.gallery {
-	height: 600px;
-	width:100%;
-	position: relative;
-}
-
-.gallery-image {
-	position: absolute;
-	top: 0;
-	display: block;
-	left:0;
-	right:0;
-	margin: 0 auto;
-	height:100%;
-	opacity: 0;
-}
-
-.gallery-control {
-	margin: 0px 30px;
-	width: 15px;
-	height: 15px;
-}
-
-.gallery-buttons {
-	margin: 0px 5px;
-	width: 10px;
-	height: 10px;
-	opacity: 0.5;
+.design-wrapper {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: flex-start;
 }
 
 #profile {
 	margin: auto;
 	display: block;
 	width: 150px;
+}
+
+.design-image {
+	height: 350px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .projects-panel {
