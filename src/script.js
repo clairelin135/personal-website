@@ -29,6 +29,19 @@ $(document).ready( function () {
 		}
 	);
 
+	$(".button").hover(
+		function() {
+			$(this).animate({
+				opacity: "0.8",
+			}, 300);
+		},
+		function() {
+			$(this).animate({
+				opacity: "1",
+			}, 300);
+		}
+	);
+
 	$(document).on('scroll', function() {
 		$(".selected-navbar-option").removeClass("selected-navbar-option");
 		var scrollBottom = $(window).scrollTop() + $(window).height();
