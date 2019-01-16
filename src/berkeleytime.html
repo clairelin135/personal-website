@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="./styles/navigation.css" />
   <link rel="stylesheet" href="./styles/banner.css" />
   <link rel="stylesheet" href="./styles/layout.css" />
+  <link rel="stylesheet" href="./styles/design-subpage.css" />
   <script src="script.js"></script>
 </head>
 <body>
@@ -21,7 +22,7 @@
 			<div class="navbar-container">
 				<div class="pa3">
 					<a href="./index.html#claire-lin">
-						<h6 class="navbar-option selected-navbar-option">Claire Lin</h6>
+						<h6 class="navbar-option">Claire Lin</h6>
 					</a>
 				</div>
 				<div class="pa3">
@@ -42,8 +43,145 @@
 			</div>
     </div>
 	</div>
-  <div class="navbar-margin center mw9">
-    <h2>BerkeleyTime Redesign</h2>
+  <div class="navbar-margin relative">
+    <div class="blue-background intro-bg">
+    </div>
+    <div class="center mw8 pt5">
+      <div class="mv5">
+        <h5><span class="white">BerkeleyTime Redesign</span></h5>
+        <p class="white">A personal project to redesign the BerkeleyTime course scheduler commonly used by Cal students</p>
+      </div>
+      <img src="images\hifi-catalog.png" class="contain large-image w-100"></img>
+    </div>
+    <div class="mv6 center mw8">
+      <div class="mb5 ph6">
+        <h5><span class="blue">Introduction</span></h5>
+        <p class="tl"><a href="https://www.berkeleytime.com"><span class="blue">BerkeleyTime</span></a> is a course discovery platform developed by a team of undergraduates;
+          its search capabilities and accessible course insights make it an asset to the university community.
+          As a thought exercise to analyze the role of design in ensuring intuitive website interactions, I challenged
+          myself to streamline its design.
+        </p>
+      </div>
+      <div class="centered-row mb4">
+        <img src="images/berkeleytime/original/catalog.png" class="bt-image contain mh2"></img>
+        <img src="images/berkeleytime/original/grade.png" class="bt-image contain mh2"></img>
+        <img src="images/berkeleytime/original/calendar.png" class="bt-image contain mh2"></img>
+      </div>
+      <p><i>Several screens of the original BerkeleyTime design</i></p>
+    </div>
+    <div class="snow-background pv6">
+      <div class="mw8 center">
+        <div class="ph6 mb5">
+          <h5><span class="blue">User Research</span></h5>
+          <p class="tl">After surveying three students who frequently use BerkeleyTime, I identified key strengths and areas of
+            improvement for the use of the platform. I chose to focus on the two major features of the platform: the course catalog,
+            which students use to browse classes, and the scheduler, which allows students to view different scheduling options
+            for courses.
+          </p>
+        </div>
+        <div class="centered-row w-100">
+          <div class="w-50 pr2">
+            <div class="pa3 white-background">
+      				<h6 class="blue">Strengths</h6>
+              <ul class="tl">
+                <li>Easy way to search, filter, and sort classes</li>
+                <li>Ability to view viable schedules</li>
+                <li>Accessible insights, such as average grade and enrollment status</li>
+              </ul>
+            </div>
+    			</div>
+    			<div class="w-50 pl2">
+            <div class="pa3 white-background">
+      				<h6 class="blue">Areas of Improvement</h6>
+              <ul class="tl">
+                <li>Ease of organizing and scheduling classes in consideration</li>
+                <li>Cumbersome navigation to view class details</li>
+                <li>Inability to locate available classes in a given time frame</li>
+              </ul>
+            </div>
+    			</div>
+        </div>
+      </div>
+    </div>
+    <div class="pv6">
+      <div class="mw8 center">
+        <h5><span class="blue">Mid-Fidelity Designs</span></h5>
+        <div class="ph6">
+          <h6 class="blue">Course Catalog Design Considerations</h6>
+          <ul class="tl">
+            <li>Eliminated cumbersome navigation to view course details by displaying information in hidden dropdowns</li>
+            <li>Delineated a clear user flow by adding a floating action button to add course to scheduler</li>
+            <li>Exposed key course details such as class size, time, and location in immediate course overview</li>
+            <li>Established clear filtering options by converting filter tabs to hidden dropdowns</li>
+            <li>Added key ability to filter for classes in a given time frame</li>
+            <li>Ensured ease of browsing by maintaining dense course toggle list and panel layout</li>
+          </ul>
+        </div>
+        <img src="images/berkeleytime/mid-fi/catalog.png" class="contain large-image w-100 mt4"></img>
+        <p><i>Mid-fidelity redesign of course catalog</i></p>
+        <div class="ph6 mt5">
+          <h6 class="blue">Scheduler Design Considerations</h6>
+          <ul class="tl">
+            <li>Reduced multi-step display options to a single-screen overview with schedule management and editing capabilities</li>
+            <li>Increased user flexibility through a dense course selection toggle menu, with details hidden in dropdowns</li>
+            <li>Maintained accessibility for manipulating schedule through simple modals</li>
+          </ul>
+        </div>
+        <div class="centered-row mt5">
+          <img src="images/berkeleytime/mid-fi/calendar1.png" class="med-image contain mh2"></img>
+          <img src="images/berkeleytime/mid-fi/calendar2.png" class="med-image contain mh2"></img>
+        </div>
+        <p><i>Mid-fidelity redesign of scheduler</i></p>
+      </div>
+    </div>
+    <div class="snow-background pv6">
+      <div class="mw8 center">
+        <h5><span class="blue">High-Fidelity Designs</span></h5>
+        <div class="ph6 mt5">
+          <h6 class="blue">Course Catalog Design Considerations</h6>
+          <ul class="tl">
+            <li>Ensured ease of course identification through consistent colors along toggle menu and panel component</li>
+            <li>Reduced convoluted course details by partitioning information into toggling tabs</li>
+            <li>Adjusted time selection filter to allow greater schedule flexibility</li>
+            <li>Restructured minor details such as filter order and course statistics to yield a clear linear reading direction</li>
+            <li>Maintained consistent application branding by sharing same theme color as original site</li>
+          </ul>
+        </div>
+        <div class="pa3 light-gray-background mt5">
+          <img src="images/berkeleytime/hi-fi/catalog1.png" class="contain large-image w-100"></img>
+        </div>
+        <p><i>High-fidelity redesign of course catalog</i></p>
+        <div class="ph6 mt5">
+          <h6 class="blue">Scheduler Design Considerations</h6>
+          <ul class="tl">
+            <li>Finalized detailed course options such as editing and deleting courses from scheduler</li>
+            <li>Ensured ease of course identification by implementing consistent colors along toggle menu and calendar component</li>
+            <li>Established clear action hierarchy through primary and secondary buttons on modal</li>
+          </ul>
+        </div>
+        <div class="pa3 light-gray-background mt5">
+          <img src="images/berkeleytime/hi-fi/calendar1.png" class="contain large-image w-100"></img>
+        </div>
+        <div class="pa3 light-gray-background mt5">
+          <img src="images/berkeleytime/hi-fi/calendar2.png" class="contain large-image w-100"></img>
+        </div>
+        <p><i>High-fidelity redesign of scheduler</i></p>
+      </div>
+    </div>
   </div>
+  <div id="footer">
+    <div class="mw8 center pa3">
+			<div class="fl w-50 tl">
+				<p class="white"><span class="reverse">ude.yelekreb@531nilerialc</span></p>
+			</div>
+			<div class="fl w-50 tl">
+				<span>
+					<a href="https://www.linkedin.com/in/clairelin135/"><img src="images\links\linkedIn.png" class="link-image"></a>
+					<a href="https://www.behance.net/clairelin135"><img src="images\links\behance.png" class="link-image"></a>
+					<a href="https://github.com/clairelin135"><img src="images\links\github.png" class="link-image"></a>
+				</span>
+			</div>
+    </div>
+	</div>
 </body>
 </html>

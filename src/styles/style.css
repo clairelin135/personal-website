@@ -53,6 +53,14 @@ a, a:hover, a:active, a:visited, a:focus {
   color: inherit;
 }
 
+li {
+  font-family: 'Heebo', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  line-height: 18px;
+}
+
 .white {
   color: #ffffff;
 }
@@ -67,6 +75,10 @@ a, a:hover, a:active, a:visited, a:focus {
 
 .snow-background {
   background-color: #f4f4f4;
+}
+
+.light-gray-background {
+  background-color: rgb(230, 230, 230);
 }
 
 .light-blue {
@@ -103,4 +115,15 @@ a, a:hover, a:active, a:visited, a:focus {
 
 .contain {
   object-fit: contain;
+}
+
+.button {
+  padding: 8px 16px;
+	border-radius: 20px;
+  cursor: pointer;
+  background-color: #5862e9;
+}
+
+.button:hover {
+  background-color: rgba(88, 98, 233, 0.8);
 }
