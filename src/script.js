@@ -1,10 +1,5 @@
 $(document).ready( function () {
 	var clicked = false;
-	sizeBannerBackground();
-	createGalleryIcons();
-
-	$('.gallery-image').first().css("opacity", "1");
-	$('.gallery-buttons').first().css("opacity", "1");
 
 	$(".navbar-option").hover(
 		function() {
@@ -33,136 +28,6 @@ $(document).ready( function () {
 			}, 300);
 		}
 	);
-
-	$(".button-blue").hover(
-		function() {
-			$(this).animate({
-				backgroundColor: "#33a1fe",
-			}, 300);
-		},
-		function() {
-			$(this).animate({
-				backgroundColor: "#008aff",
-			}, 300);
-		}
-	);
-	$(".button-orange").hover(
-		function() {
-			$(this).animate({
-				backgroundColor: "#fad45e",
-			}, 300);
-		},
-		function() {
-			$(this).animate({
-				backgroundColor: "#f8c424",
-			}, 300);
-		}
-	);
-
-	$(".gallery-buttons").hover(
-		function() {
-			$(this).animate({
-				opacity: "1",
-			}, 300);
-		},
-		function() {
-			if($(this).hasClass("selected-gallery-button")) {
-
-			} else {
-				$(this).animate({
-					opacity: "0.5",
-				}, 300);
-			};
-		}
-	);
-
-	$(".gallery-control").hover(
-		function() {
-			$(this).animate({
-				opacity: "0.5",
-			}, 300);
-		},
-		function() {
-			$(this).animate({
-				opacity: "1",
-			}, 300);
-		}
-	);
-
-	$( ".gallery-buttons" ).click(function() {
-		var $gallerybuttons = $('.gallery-buttons');
-		var index = jQuery.inArray(this, $gallerybuttons);
-
-		var $galleryimage = $('.gallery-image');
-		for(var i = 0; i < $galleryimage.length; i++) {
-			if($galleryimage.eq(i).css("opacity")=='1') {
-				$galleryimage.eq(i).animate({
-					opacity: "0",
-				}, 300);
-				$gallerybuttons.eq(i).animate({
-					opacity: "0.5",
-				}, 300);
-				$gallerybuttons.eq(i).removeClass('selected-gallery-button');
-			}
-		}
-		$galleryimage.eq(index).animate({
-			opacity: "1",
-		}, 300);
-		$gallerybuttons.eq(index).animate({
-			opacity: "1",
-		}, 300);
-		$gallerybuttons.eq(index).addClass('selected-gallery-button');
-	});
-
-	$( ".gallery-control" ).click(function() {
-		var $gallerycontrol = $('.gallery-control');
-		var control = jQuery.inArray(this, $gallerycontrol);
-
-		var index = 0;
-		var $galleryimage = $('.gallery-image');
-		var $gallerybuttons = $('.gallery-buttons');
-
-		for(var i = 0; i < $galleryimage.length; i++) {
-			if($galleryimage.eq(i).css("opacity")=='1') {
-				index = i;
-				$galleryimage.eq(i).animate({
-					opacity: "0",
-				}, 300);
-				$gallerybuttons.eq(i).removeClass('selected-gallery-button');
-				$gallerybuttons.eq(i).animate({
-					opacity: "0.5",
-				}, 300);
-			}
-		}
-
-		if(control == 0) {
-			//BACK
-			index = index - 1;
-			if(index < 0) {
-				index = $galleryimage.length - 1;
-			}
-			$galleryimage.eq(index).animate({
-				opacity: "1",
-			}, 300);
-			$gallerybuttons.eq(index).addClass('selected-gallery-button');
-			$gallerybuttons.eq(index).animate({
-				opacity: "1",
-			}, 300);
-		} else {
-			//FORWARD
-			index = index + 1;
-			if(index >= $galleryimage.length) {
-				index = 0;
-			}
-			$galleryimage.eq(index).animate({
-				opacity: "1",
-			}, 300);
-			$gallerybuttons.eq(index).addClass('selected-gallery-button');
-			$gallerybuttons.eq(index).animate({
-				opacity: "1",
-			}, 300);
-		}
-	});
 
 	$(document).on('scroll', function() {
 		$(".selected-navbar-option").removeClass("selected-navbar-option");
@@ -212,23 +77,4 @@ function switchToMenu() {
 			clicked = false;
 		}
 	});
-}
-
-function sizeBannerBackground() {
-	var back = $('.background-image-wrapper');
-	var top = $('#front-banner').height()-(back.width()/2);
-	var image = $('#banner-image-background');
-	image.css('margin-top', top);
-	var front = $('#banner-image-front');
-	front.css('margin-top', top);
-}
-
-function createGalleryIcons() {
-	$("#gallery-nav").append('<img src="https://i.imgur.com/31sAs1C.png" class="gallery-control"><img src="https://i.imgur.com/avXRzyu.png" class="gallery-buttons selected-gallery-button">');
-	var numItems = $('.gallery-image').length;
-	numItems = numItems - 1;
-	for (i = 0; i < numItems; i++) {
-		$("#gallery-nav").append('<img src="https://i.imgur.com/avXRzyu.png" class="gallery-buttons">');
-	}
-	$("#gallery-nav").append('<img src="https://i.imgur.com/cez68ik.png" class="gallery-control">');
 }
